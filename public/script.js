@@ -18,7 +18,7 @@ function fillProgressBar() {
 
             // После завершения загрузки можно перенаправить пользователя на другую страницу
             setTimeout(() => {
-                window.location.href = 'Home/Home.html'; // Переход на страницу города
+                window.location.href = 'public/Home/home.html'; // Переход на страницу города
             }, 500); // Задержка перед переходом (опционально)
         }
     }, interval);
