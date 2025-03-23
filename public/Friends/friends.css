@@ -1,0 +1,189 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Верхняя панель */
+#top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.balances {
+    display: flex;
+    gap: 20px;
+}
+
+.gem-balance {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.gem-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Реферальная ссылка */
+#referral-section {
+    color: #ffffff;
+    margin-top: 60px; /* Отступ для верхней панели */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.referral-link-container {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+#referral-link {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#copy-referral-link {
+    background-color: #00cd2c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#copy-referral-link:hover {
+    background-color: #ffffff;
+}
+
+/* Статистика */
+#stats-section {
+    font-size: 10px;
+    gap: 50px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stat-item {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.stat-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Список приглашенных друзей */
+#friends-list {
+    font-size: 12px;
+    color: #ffffff;
+    width: 100%;
+    padding: 20px;
+}
+
+.friend-item {
+    color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.friend-name {
+    color: #110299;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.friend-earnings {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Стили для нижнего меню */
+#bottom-menu {
+    position: fixed; /* Фиксированное положение */
+    bottom: 0; /* Прижато к нижней части экрана */
+    left: 0; /* Начинается с левого края */
+    width: 100%; /* Занимает всю ширину экрана */
+    background-color: #000000; /* Черный фон */
+    display: flex; /* Элементы в строку */
+    justify-content: space-around; /* Равномерное распределение элементов */
+    align-items: center; /* Выравнивание по центру */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тень сверху */
+    z-index: 1000; /* Чтобы меню было поверх других элементов */
+}
+
+/* Стили для элементов меню */
+.menu-item {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #ffffff; /* Цвет текста */
+    font-family: Georgia, serif;
+    font-size: 12px; /* Размер текста */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Анимация при наведении */
+.menu-item:hover {
+    background-color: #f0f0f0; /* Светло-серый фон */
+}
+
+/* Стиль для активного элемента */
+.menu-item.active {
+    color: #ffffff; /* Белый цвет */
+    font-weight: bold; /* Жирный текст */
+}

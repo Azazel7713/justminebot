@@ -1,0 +1,164 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #000000;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Верхняя панель */
+#top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.balances {
+    display: flex;
+    gap: 20px;
+}
+
+.gem-balance {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.gem-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Список заданий */
+#tasks-container {
+    margin-top: 50px; /* Отступ для верхней панели */
+    margin-bottom: 60px; /* Отступ для нижнего меню */
+    width: 100%;
+    padding: 20px;
+}
+
+.task-item {
+    background-color: #000000;
+    border: 1px solid #1dc200;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.task-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.task-reward {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #44d600;
+}
+
+.reward-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.task-button {
+    background-color: #0a9500;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-button:hover {
+    background-color: #0056b3;
+}
+
+.task-button.loading {
+    background-color: #ffc107;
+    cursor: not-allowed;
+}
+
+.task-button.completed {
+    background-color: #28a745;
+    cursor: not-allowed;
+}
+
+/* Стили для нижнего меню */
+#bottom-menu {
+    position: fixed; /* Фиксированное положение */
+    bottom: 0; /* Прижато к нижней части экрана */
+    left: 0; /* Начинается с левого края */
+    width: 100%; /* Занимает всю ширину экрана */
+    background-color: #000000; /* Черный фон */
+    display: flex; /* Элементы в строку */
+    justify-content: space-around; /* Равномерное распределение элементов */
+    align-items: center; /* Выравнивание по центру */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тень сверху */
+    z-index: 1000; /* Чтобы меню было поверх других элементов */
+}
+
+/* Стили для элементов меню */
+.menu-item {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #ffffff; /* Цвет текста */
+    font-family: Georgia, serif;
+    font-size: 12px; /* Размер текста */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Анимация при наведении */
+.menu-item:hover {
+    background-color: #f0f0f0; /* Светло-серый фон */
+}
+
+/* Стиль для активного элемента */
+.menu-item.active {
+    color: #ffffff; /* Белый цвет */
+    font-weight: bold; /* Жирный текст */
+}

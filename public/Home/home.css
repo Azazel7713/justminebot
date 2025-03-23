@@ -1,0 +1,113 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('back.jpg'); /* Фоновая картинка */
+    background-size: cover; /* Картинка покрывает весь экран */
+    background-position: center; /* Центрируем картинку */
+    background-color: #000000; /* Светлый фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Стили для контейнера */
+#home-container {
+    text-align: center;
+    background-color: #00000000; /* Белый фон */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Заголовок */
+#home-container h1 {
+    font-family: 'KZ Supercell-Magic', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    /* Градиентный цвет текста */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Оранжевый градиент */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Анимация увеличения и уменьшения */
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Текст */
+#home-container p {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Кнопка */
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 26px;
+    font-family: Georgia, serif;
+    color: #ffffff;
+    background-color: #000000e7; /* Синий цвет */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Анимация при наведении на кнопку */
+.button:hover {
+    background-color: #202901; /* Темно-синий цвет */
+}
+
+/* Анимация пульсации текста */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Нормальный размер */
+    }
+    50% {
+        transform: scale(1.1); /* Увеличенный размер */
+    }
+}
+
+* Применяем пульсацию к тексту внутри кнопки */
+.button span {
+    display: inline-block;
+    animation: pulse 2s infinite; /* Бесконечная анимация */
+}
+
+/* Анимация фона (эффект волн) */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Эффект волн при наведении */
+.button:hover::before {
+    transform: scale(2); /* Волна расширяется */
+    opacity: 1;
+}
+
+

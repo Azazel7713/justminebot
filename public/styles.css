@@ -1,0 +1,49 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Черный фон (если картинка не загрузится) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('background.jpg'); /* Фоновая картинка */
+    background-size: cover; /* Картинка покрывает весь экран */
+    background-position: center; /* Центрируем картинку */
+}
+
+/* Стили для экрана загрузки */
+#loading-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Положение полосы прогресса внизу */
+    align-items: center;
+}
+
+/* Контейнер для полосы прогресса */
+#progress-container {
+    width: 80%;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.3); /* Полупрозрачный фон */
+    border-radius: 5px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    left: 10%;
+}
+
+/* Полоса прогресса */
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #ffffff; /* Белый цвет */
+    transition: width 0.1s ease; /* Плавное заполнение */
+}

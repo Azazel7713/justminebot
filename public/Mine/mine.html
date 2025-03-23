@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="mine.css">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <div id="top-panel">
+        <div class="player-info">
+            <img src="avatar.png" alt="Аватар" class="avatar"> <!-- Маленькая картинка -->
+        </div>
+        <div class="balances">
+            <div class="gem-balance red-gem">
+                <img src="images/gems/red-gem.png" alt="Красный самоцвет" class="gem-icon">
+                <span id="red-gems">0</span>
+            </div>
+            <div class="gem-balance yellow-gem">
+                <img src="images/gems/yellow-gem.png" alt="Желтый самоцвет" class="gem-icon">
+                <span id="yellow-gems">0</span>
+            </div>
+            <div class="gem-balance blue-gem">
+                <img src="images/gems/blue-gem.png" alt="Синий самоцвет" class="gem-icon">
+                <span id="blue-gems">0</span>
+            </div>
+            <div class="gem-balance purple-gem">
+                <img src="images/gems/purple-gem.png" alt="Фиолетовый самоцвет" class="gem-icon">
+                <span id="purple-gems">0</span>
+            </div>
+            <div class="money-balance">💵 <span id="money-balance">0</span></div>
+        </div>
+    </div>
+
+    <!-- Область для кликов -->
+    <div id="mine-area">
+        <img src="pickaxe.png" alt="Кирка" id="pickaxe" class="hidden">
+    </div>
+
+    <!-- Контейнер для кнопки и счетчика кликов -->
+    <div id="buy-clicks-container">
+        <button id="buy-clicks-button">
+            <img src="pickaxe.png" alt="Покупка кликов" width="24" height="24">
+            Купить 100 кирок
+        </button>
+        <span id="clicks-count" class="pickaxe-count">100 кирок осталось</span>
+    </div>
+
+    <!-- Нижнее меню -->
+    <div id="bottom-menu">
+        <a href="/mine/mine.html" class="menu-item">Пещера</a>
+        <a href="/partner/partner.html" class="menu-item">Заработок</a>
+        <a href="/friends/friends.html" class="menu-item">Друзья</a>
+        <a href="/wallet/wallet.html" class="menu-item">Кошелек</a>
+    </div>
+
+    <!-- Звуковой эффект -->
+    <audio id="click-sound" src="click.mp3"></audio>
+
+    <script src="mine.js"></script>
+</body>
+</html>

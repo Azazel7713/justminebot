@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошелек</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="wallet.css">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <div id="top-panel">
+        <div class="player-info">
+            <img src="avatar.png" alt="Аватар" class="avatar"> <!-- Маленькая картинка -->
+        </div>
+        <div class="balances">
+            <div class="gem-balance red-gem">
+                <img src="images/gems/red-gem.png" alt="Красный самоцвет" class="gem-icon">
+                <span id="red-gems">0</span>
+            </div>
+           
+            </div>
+            <div class="gem-balance blue-gem">
+                <img src="images/gems/blue-gem.png" alt="Синий самоцвет" class="gem-icon">
+                <span id="blue-gems">0</span>
+            </div>
+            <div class="gem-balance purple-gem">
+                <img src="images/gems/purple-gem.png" alt="Фиолетовый самоцвет" class="gem-icon">
+                <span id="purple-gems">0</span>
+            </div>
+            <div class="gem-balance usdt">
+                <img src="images/gems/usdt.png" alt="USDT" class="gem-icon">
+                <span id="usdt-balance">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div id="wallet-container">
+        <!-- Обмен -->
+        <div id="exchange-section">
+            <h2>Обмен</h2>
+            <div class="exchange-form">
+                <select id="exchange-from">
+                    <option value="red">Красные кристаллы</option>
+                    <option value="blue">Синие кристаллы</option>
+                    <option value="purple">Фиолетовые кристаллы</option>
+                    <option value="yellow">Жёлтые кристаллы</option>
+                </select>
+                <span>→</span>
+                <select id="exchange-to">
+                    
+                    <option value="usdt">USDT</option>
+                </select>
+                <input type="number" id="exchange-amount" placeholder="Количество" min="1">
+                <button id="exchange-button">Обменять</button>
+                <p id="exchange-error" class="error"></p>
+            </div>
+        </div>
+
+        <!-- Вывод -->
+        <div id="withdraw-section">
+            <h2>Вывод USDT</h2>
+            <div class="withdraw-form">
+                <input type="text" id="withdraw-address" placeholder="TRC20 адрес">
+                <input type="number" id="withdraw-amount" placeholder="Сумма" min="1">
+                <button id="withdraw-button">Вывести</button>
+                <p id="withdraw-error" class="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижнее меню -->
+    <div id="bottom-menu">
+        <a href="/mine/mine.html" class="menu-item">Пещера</a>
+        <a href="/partner/partner.html" class="menu-item">Заработок</a>
+        <a href="/friends/friends.html" class="menu-item">Друзья</a>
+        <a href="/wallet/wallet.html" class="menu-item active">Кошелек</a>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="wallet.js"></script>
+</body>
+</html>

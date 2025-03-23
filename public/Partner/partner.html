@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заработок</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="partner.css">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <div id="top-panel">
+        <div class="player-info">
+            <img src="avatar.png" alt="Аватар" class="avatar"> <!-- Маленькая картинка -->
+        </div>
+        <div class="balances">
+            <div class="gem-balance blue-gem">
+                <img src="images/gems/blue-gem.png" alt="Синий самоцвет" class="gem-icon">
+                <span id="blue-gems">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Список заданий -->
+    <div id="tasks-container">
+        <!-- Пример одного задания -->
+        <div class="task-item">
+            <div class="task-header">
+                <img src="images/social-icons/telegram.png" alt="Telegram" class="social-icon">
+                <span class="task-title">Подпишись на Джокер</span>
+                <span class="task-reward">+20<img src="images/gems/blue-gem.png" alt="Синий кристалл" class="reward-icon"></span>
+            </div>
+            <button class="task-button" data-url="https://t.me/example_channel">Подписаться</button>
+        </div>
+
+        
+        <div class="task-item">
+            <div class="task-header">
+                <img src="images/social-icons/telegram.png" alt="Telegram" class="social-icon">
+                <span class="task-title">Подпишись на Just Mine</span>
+                <span class="task-reward">+20<img src="images/gems/blue-gem.png" alt="Синий кристалл" class="reward-icon"></span>
+            </div>
+            <button class="task-button" data-url="https://t.me/example_channel">Подписаться</button>
+        </div>
+        
+        <div class="task-item">
+            <div class="task-header">
+                <img src="images/social-icons/telegram.png" alt="Telegram" class="social-icon">
+                <span class="task-title">Подпишись на Психодемика</span>
+                <span class="task-reward">+20<img src="images/gems/blue-gem.png" alt="Синий кристалл" class="reward-icon"></span>
+            </div>
+            <button class="task-button" data-url="https://t.me/example_channel">Подписаться</button>
+        </div>
+
+        <div class="task-item">
+            <div class="task-header">
+                <img src="images/social-icons/telegram.png" alt="Telegram" class="social-icon">
+                <span class="task-title">Подпишись на АльтХаус</span>
+                <span class="task-reward">+20<img src="images/gems/blue-gem.png" alt="Синий кристалл" class="reward-icon"></span>
+            </div>
+            <button class="task-button" data-url="https://t.me/example_channel">Подписаться</button>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Нижнее меню -->
+    <div id="bottom-menu">
+        <a href="/mine/mine.html" class="menu-item">Пещера</a>
+        <a href="/partner/partner.html" class="menu-item">Заработок</a>
+        <a href="/friends/friends.html" class="menu-item active">Друзья</a>
+        <a href="/wallet/wallet.html" class="menu-item">Кошелек</a>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="partner.js"></script>
+</body>
+</html>

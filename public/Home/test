@@ -1,0 +1,131 @@
+
+Нижнее меню 
+<div id="bottom-menu">
+    <a href="/mine/mine.html" class="menu-item">Добыча</a>
+    <a href="/partner/partner.html" class="menu-item">Друзья</a>
+    <a href="earnings.html" class="menu-item">Заработок</a>
+    <a href="/wallet/wallet.html" class="menu-item">Кошелек</a>
+</div>
+
+Дизайн верхней панели и нижнего меню
+
+/* Стили для нижнего меню */
+#bottom-menu {
+    position: fixed; /* Фиксированное положение */
+    bottom: 0; /* Прижато к нижней части экрана */
+    left: 0; /* Начинается с левого края */
+    width: 100%; /* Занимает всю ширину экрана */
+    background-color: #000000; /* Белый фон */
+    display: flex; /* Элементы в строку */
+    justify-content: space-around; /* Равномерное распределение элементов */
+    align-items: center; /* Выравнивание по центру */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тень сверху */
+    z-index: 1000; /* Чтобы меню было поверх других элементов */
+}
+
+/* Стили для элементов меню */
+.menu-item {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #ffffff; /* Цвет текста */
+    font-family: Georgia, serif;
+    font-size: 12px; /* Размер текста */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Анимация при наведении */
+.menu-item:hover {
+    background-color: #f0f0f0; /* Светло-серый фон */
+}
+
+/* Стиль для активного элемента */
+.menu-item.active {
+    color: #ffffff; /* Синий цвет */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Стили для верхней панели */
+#top-panel {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем по центру */
+    padding: 10px 20px; /* Отступы внутри панели */
+    background-color: #000000; /* Цвет фона */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    position: fixed; /* Фиксируем панель в верхней части экрана */
+    top: 0;
+    left: 0;
+    width: 100%; /* Занимает всю ширину экрана */
+    z-index: 1000; /* Чтобы панель была поверх других элементов */
+}
+
+/* Стили для информации о игроке */
+.player-info {
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+}
+
+.avatar {
+    width: 40px; /* Размер аватара */
+    height: 40px;
+    border-radius: 50%; /* Круглая форма */
+    margin-right: 10px; /* Отступ между аватаром и ID */
+}
+
+.player-id {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; /* Цвет текста */
+}
+
+/* Стили для балансов */
+.balances {
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+    gap: 15px; /* Расстояние между элементами */
+}
+
+.gem-balance, .money-balance {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+    gap: 5px; /* Расстояние между иконкой и числом */
+}
+
+
+.money-balance { color: #28a745; } /* Цвет баланса в долларах */
+
+/* Основной контент страницы */
+#content {
+    margin-top: 80px; /* Отступ, чтобы контент не перекрывался панелью */
+}
+
+.gem-icon {
+    width: 20px; /* Размер иконки */
+    height: 20px;
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+    vertical-align: middle; /* Выравнивание по центру */
+}
+
+<!-- Второе задание -->
+<div class="task-item">
+    <div class="task-header">
+        <img src="images/social-icons/youtube.png" alt="YouTube" class="social-icon">
+        <span class="task-title">Подпишись на канал</span>
+        <span class="task-reward">+20<img src="images/gems/blue-gem.png" alt="Синий кристалл" class="reward-icon"></span>
+    </div>
+    <button class="task-button" data-url="https://www.youtube.com/@example_channel">Подписаться</button>
+</div>
+
+<!-- Третье задание -->
+<div class="task-item">
+    <div class="task-header">
+        <img src="images/social-icons/vk.png" alt="VK" class="social-icon">
+        <span class="task-title">Подпишись на группу</span>
+        <span class="task-reward">+20<img src="images/gems/blue-gem.png" alt="Синий кристалл" class="reward-icon"></span>
+    </div>
+    <button class="task-button" data-url="https://vk.com/example_group">Подписаться</button>
+</div>  

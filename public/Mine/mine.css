@@ -1,0 +1,240 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-image: url('back.jpg'); /* Фоновая картинка */
+    background-size: cover; /* Картинка покрывает весь экран */
+    background-position: center; /* Центрируем картинку */
+    background-color: #000000; /* Черный фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Стили для верхней панели */
+#top-panel {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем по центру */
+    padding: 10px 20px; /* Отступы внутри панели */
+    background-color: #000000; /* Черный фон */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    position: fixed; /* Фиксируем панель в верхней части экрана */
+    top: 0;
+    left: 0;
+    width: 100%; /* Занимает всю ширину экрана */
+    z-index: 1000; /* Чтобы панель была поверх других элементов */
+}
+
+/* Стили для информации о игроке */
+.player-info {
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+}
+
+.avatar {
+    width: 30px; /* Размер аватара */
+    height: 30px;
+    border-radius: 50%; /* Круглая форма */
+    margin-right: 10px; /* Отступ между аватаром и ID */
+}
+
+.player-id {
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff; /* Белый цвет текста */
+}
+
+/* Стили для балансов */
+.balances {
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.gem-balance, .money-balance {
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+    gap: 5px; /* Расстояние между иконкой и числом */
+}
+
+.red-gem { color: #ff4d4d; } /* Цвет красных самоцветов */
+.yellow-gem { color: #ffcc00; } /* Цвет желтых самоцветов */
+.blue-gem { color: #007bff; } /* Цвет синих самоцветов */
+.purple-gem { color: #9c27b0; } /* Цвет фиолетовых самоцветов */
+.money-balance { color: #28a745; } /* Цвет баланса в долларах */
+
+.gem-icon {
+    width: 20px; /* Размер иконки */
+    height: 20px;
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+    vertical-align: middle; /* Выравнивание по центру */
+}
+
+/* Область для кликов */
+#mine-area {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    margin-top: 80px; /* Отступ для верхней панели */
+    margin-bottom: 60px; /* Отступ для нижнего меню */
+    background-color: transparent; /* Убедитесь, что фон прозрачный */
+    outline: none; /* Убираем обводку */
+    opacity: 1;
+    -webkit-tap-highlight-color: transparent; /* Для мобильных устройств */
+    -webkit-user-select: none; /* Запрещаем выделение текста */
+    user-select: none; /* Запрещаем выделение текста */
+}
+
+#mine-area:active {
+    background-color: transparent; /* Фон остается прозрачным */
+    opacity: 1; /* Прозрачность не меняется */
+}
+
+#pickaxe {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#pickaxe.visible {
+    opacity: 1;
+}
+
+/* Стили для попапа с самоцветом */
+#gem-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gem-popup.visible {
+    opacity: 1;
+}
+
+/* Стили для картинки самоцвета */
+.gem-image {
+    width: 50px; /* Размер картинки */
+    height: 50px;
+    object-fit: cover; /* Сохранение пропорций картинки */
+    position: absolute; /* Абсолютное позиционирование */
+    pointer-events: none; /* Чтобы картинка не мешала кликам */
+    opacity: 0; /* Начальная прозрачность (невидимый) */
+    transform: scale(0); /* Начальный масштаб (сжатый) */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавные переходы */
+}
+
+.gem-image.visible {
+    opacity: 1; /* Полная видимость */
+    transform: scale(1); /* Нормальный размер */
+}
+
+/* Стили для нижнего меню */
+#bottom-menu {
+    position: fixed; /* Фиксированное положение */
+    bottom: 0; /* Прижато к нижней части экрана */
+    left: 0; /* Начинается с левого края */
+    width: 100%; /* Занимает всю ширину экрана */
+    background-color: #000000; /* Черный фон */
+    display: flex; /* Элементы в строку */
+    justify-content: space-around; /* Равномерное распределение элементов */
+    align-items: center; /* Выравнивание по центру */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тень сверху */
+    z-index: 1000; /* Чтобы меню было поверх других элементов */
+}
+
+/* Стили для элементов меню */
+.menu-item {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #ffffff; /* Цвет текста */
+    font-family: Georgia, serif;
+    font-size: 12px; /* Размер текста */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Анимация при наведении */
+.menu-item:hover {
+    background-color: #f0f0f0; /* Светло-серый фон */
+}
+
+/* Стиль для активного элемента */
+.menu-item.active {
+    color: #ffffff; /* Белый цвет */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Стили для контейнера кнопки покупки кликов */
+#buy-clicks-container {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 60px; /* Отступ от нижнего меню */
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Расстояние между кнопкой и счетчиком */
+}
+
+/* Стили для кнопки покупки кликов */
+#buy-clicks-button {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Расстояние между иконкой и текстом */
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #000000; /* Фиолетовый цвет */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Анимация при наведении */
+#buy-clicks-button:hover {
+    background-color: #000000; /* Темно-фиолетовый цвет */
+}
+
+/* Иконка кирки на кнопке */
+#buy-clicks-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Стили для счетчика кликов */
+#clicks-count {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
