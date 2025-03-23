@@ -102,19 +102,19 @@ mineArea.addEventListener('click', (event) => {
     switch (gemType) {
         case 'red':
             redGems++;
-            gemImagePath = 'images/gems/red-gem.png'; // Путь к картинке красного самоцвета
+            gemImagePath = 'Images/gems/red-gem.png'; // Путь к картинке красного самоцвета
             break;
         case 'yellow':
             yellowGems++;
-            gemImagePath = 'images/gems/yellow-gem.png'; // Путь к картинке желтого самоцвета
+            gemImagePath = 'Images/gems/yellow-gem.png'; // Путь к картинке желтого самоцвета
             break;
         case 'blue':
             blueGems++;
-            gemImagePath = 'images/gems/blue-gem.png'; // Путь к картинке синего самоцвета
+            gemImagePath = 'Images/gems/blue-gem.png'; // Путь к картинке синего самоцвета
             break;
         case 'purple':
             purpleGems++;
-            gemImagePath = 'images/gems/purple-gem.png'; // Путь к картинке фиолетового самоцвета
+            gemImagePath = 'Images/gems/purple-gem.png'; // Путь к картинке фиолетового самоцвета
             break;
     }
 
