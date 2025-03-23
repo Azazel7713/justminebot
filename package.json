@@ -17,6 +17,6 @@
 }
 
 "scripts": {
-  "start": "node botserver.js"
+  "start": "node server.js"
 }
 
